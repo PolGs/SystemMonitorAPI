@@ -24,7 +24,7 @@ You also need to install the following libraries:
 
 You can install them by running the following command:
 
-Copy code
+
 
 `pip install Flask psutil flask_jwt_extended`
 
@@ -32,7 +32,7 @@ Copy code
 
 You can run the script by navigating to the directory where the script is located and running the following command:
 
-Copy code
+
 
 `python3 script.py`
 
@@ -52,13 +52,13 @@ To access the endpoints `/cpu`, `/memory` and `/disk`, you need to have a valid 
 
 Here's an example of how you can use `curl` to make a `POST` request to the `/login` endpoint to get an access token:
 
-Copy code
+
 
 `curl -H "Content-Type: application/json" -X POST -d '{"key":"your_secret_api_key"}' http://localhost:5000/login`
 
 Once you have the access token, you can use it to make requests to the protected endpoints by adding it to the `Authorization` header like this:
 
-Copy code
+
 
 `curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/cpu curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/memory curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/disk`
 
