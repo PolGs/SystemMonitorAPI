@@ -3,6 +3,10 @@ System Monitoring API
 
 This script is an API that exposes system information such as CPU usage, memory and disk usage via endpoints protected by JSON Web Tokens (JWT) tokens, it also includes a login endpoint for getting the tokens.
 
+Example HTML + JS GUI
+![image](https://user-images.githubusercontent.com/19478700/214090845-92b3c680-b97c-42db-ae01-40dc90dc18b2.png)
+
+
 Getting Started
 ---------------
 
