@@ -1,0 +1,44 @@
+/* some basic styling */
+body {
+  font-family: Arial, sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+/* Style the cards */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Style the values */
+.card p {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Style the title */
+.card h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* Style the icon */
+.card img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+/* Add gradient background to the cards */
+.card {
+  background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
+}

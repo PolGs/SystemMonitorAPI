@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>System Monitor</title>
+  </head>
+  <body>
+    <h1>System Monitor</h1>
+    <div class="card">
+      <img src="cpu.svg" >
+      <h2>CPU Usage: </h2>
+      <p class="value" id="cpu"></p>
+    </div>
+    <div class="card">
+      <img src="memory.svg" >
+      <h2>Memory Usage: </h2>
+      <p class="memory" id="memory"></p>
+    </div>
+    <div class="card">
+      <img src="disk.svg" >
+      <h2>Disk Usage:</h2>
+      <p class="disk" id="disk"></p>
+    </div>
+    <script>
+      // Add your access token here
+      const ACCESS_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3NDQ5MDMzNywianRpIjoiYzgwZDk1NDktMjU4Ni00M2Q4LTg1NWItNDM2OWM5NjRhNzk5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InlvdXJfc2VjcmV0X2FwaV9rZXkiLCJuYmYiOjE2NzQ0OTAzMzcsImV4cCI6MTY3NDQ5MTIzN30.l_XMxi3Y0t-uoeo1BhGrm3RlkGcxgoJfmhcWN5lPyoI"
+
+      // Fetch the CPU usage
+      fetch("http://localhost:5000/cpu", {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`
+        }
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("cpu").innerHTML = data.cpu_percent + "%";
+      });
+
+
+      // Fetch the memory usage
+      fetch("http://localhost:5000/memory", {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("memory").innerHTML = data.percent + "%";
+        });
+
+      // Fetch the disk usage
+      fetch("http://localhost:5000/disk", {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${ACCESS_TOKEN}`
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("disk").innerHTML = data.percent + "%";
+        });
+    </script>
