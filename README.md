@@ -60,9 +60,9 @@ Once you have the access token, you can use it to make requests to the protected
 
 
 
-`curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/cpu
-curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/memory
-curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/disk`
+`curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/cpu`
+`curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/memory`
+`curl -H "Authorization: Bearer ACCESS_TOKEN" http://localhost:5000/disk`
 
 Please keep in mind that you should replace `'your_secret_api_key'` with the actual key you have defined in your script and also replace `'ACCESS_TOKEN'` with the actual token you get after the login request.
 
